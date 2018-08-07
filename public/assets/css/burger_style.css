@@ -1,0 +1,15 @@
+body { 
+    background: url("assets/img/background.jpg");
+    background-repeat:no-repeat;
+    background-position: center; 
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* font-family: 'Kirang Haerang', cursive;
+    font-family: 'Bangers', cursive;
+    font-family: 'Audiowide', cursive;
+    font-family: 'Special Elite', cursive; */
+    font-family: 'Roboto', sans-serif;
+  } 

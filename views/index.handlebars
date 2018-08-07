@@ -1,30 +1,42 @@
-<h1>Task Saver</h1>
-
-<h3>Eat-Da-Burger!</h3>
+<h1>Eat-Da-Burger</h1>
 
 <ul>
   {{#each burgers}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-       <p>Task: {{this.name}}</p>
-       <button type="/devour">Devour it!</button>
-  	</li>
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
   {{/each}}
+  
 </ul>
 
 <ul>
-  {{#click burgers}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-       <p>Task: {{this.name}}</p>
-     
-  	</li>
-  {{/click}}
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/unless}}
+  {{/each}}
 </ul>
 
-<form action="/" method="POST">
-	<textarea type="text" name="task"></textarea>
+<li>
+	{{name}}
 
-	<button type="/submit">Submit</button>
+	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		{{#if devoured}} Devour It!</button>
+</li>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="bn">Burger Name:</label>
+    <input type="text" id="bn" name="burger_name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">devoured</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devour It!<br>
+    <input type="radio" name="devoured" value="0"> Eat
+  </div>
+
+  <button type="submit">Submit</button>
 </form>
-<p>Enter a burger you want to eat. Click the "Submit" button.</p>
