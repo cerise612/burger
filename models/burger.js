@@ -1,0 +1,1 @@
+require("./config/orm.js")(app);
