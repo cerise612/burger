@@ -32,7 +32,7 @@ $(".create-form").on("submit", function(event) {
     // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
-      data: newBurgers
+      data: newBurger
     }).then(
       function() {
         console.log("created new burger");
