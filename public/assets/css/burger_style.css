@@ -1,15 +1,60 @@
-body { 
-    background: url("assets/img/background.jpg");
-    background-repeat:no-repeat;
-    background-position: center; 
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    /* font-family: 'Kirang Haerang', cursive;
-    font-family: 'Bangers', cursive;
-    font-family: 'Audiowide', cursive;
-    font-family: 'Special Elite', cursive; */
-    font-family: 'Roboto', sans-serif;
-  } 
+body {
+  background: url("https://res.cloudinary.com/complex/image/upload/c_fill,g_center,w_1200/fl_lossy,pg_1,q_auto/krusty-krab-viacom_eb1tmr.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Bangers', cursive;
+  text-align: center;
+}
+h1 {
+  color: #dfbc07;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+#burgerImage {
+  margin-top: 40vh;
+}
+
+h2 {
+  color: #22d9df;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+#bn{
+  height: 17vh;
+  width: 35vw;
+}
+#entry{
+  font-size: x-large;
+  color: #cba5e3;
+  text-shadow:
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  2px 2px 0 #000;
+}
+#submitButton{
+background-color: #712a7c;
+font-family: "Roboto", sans-serif;
+color: #fdd93a;
+border-color: #fdd93a;
+border-width: thin;
+}
+.change-devoured{
+  background-color: #930816;
+  font-family: "Roboto", sans-serif;
+  color: #dfbc07;
+  border-color: #dfbc07;
+  border-width: thin; 
+}
+
