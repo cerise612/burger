@@ -1,3 +1,7 @@
+// require jquery from 'jquery';
+// window.$ = window.jQuery = jquery;
+// require('jquery-slimscroll');
+
 var express = require("express");
 var bodyParser = require("body-parser");
 
@@ -30,3 +34,4 @@ app.listen(PORT, function() {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
+
