@@ -68,5 +68,5 @@ var orm = {
         });
     },
 }
-
+// Export connection for models/burger.js to use.
 module.exports = orm;
