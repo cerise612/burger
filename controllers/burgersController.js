@@ -8,7 +8,7 @@ var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/api/", function(req, res) {
-  
+   concole.log("working")
     burger.all(function(data) {
       var hbsObject = {
         burgers: data
