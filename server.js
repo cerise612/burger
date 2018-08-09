@@ -1,7 +1,3 @@
-// require jquery from 'jquery';
-// window.$ = window.jQuery = jquery;
-// require('jquery-slimscroll');
-
 var express = require("express");
 var bodyParser = require("body-parser");
 
