@@ -5,9 +5,9 @@ var router = express.Router();
 // Import the model (burger.js) to use its database functions.
 var burgers = require("../models/burger.js");
 
-router.get("/test", function(req, res){
-  res.send("tested");
-});
+// router.get("/test", function(req, res){
+//   res.send("tested");
+// });
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -22,13 +22,15 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create(
+  burgers.create(
     ["name", "devoured"],
     [req.body.name, req.body.devoured],
     function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
+      // (result).appendChild("#eat");
     }
+    
   );
 });
 
@@ -37,7 +39,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.update(
+  burgers.update(
     {
       devoured: req.body.devoured
     },
