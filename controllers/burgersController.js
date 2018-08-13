@@ -1,10 +1,11 @@
 var express = require("express");
+var bodyParser = require("body-parser");
 
 var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
 var burgers = require("../models/burger.js");
-
+var app = express();
 // router.get("/test", function(req, res){
 //   res.send("tested");
 // });
@@ -19,11 +20,12 @@ router.get("/", function(req, res) {
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
+  // app.use(bodyParser.json( hbsObject )) parser not working
 });
 
 router.post("/api/burgers", function(req, res) {
   burgers.create(
-    ["name", "devoured"],
+    ["burger_name", "devoured"],
     [req.body.name, req.body.devoured],
     function(result) {
       // Send back the ID of the new quote

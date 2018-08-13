@@ -1,5 +1,10 @@
+// var ajax = require(router);
+
+
 $(document).ready(function(){
+
   $("#devouredRadio").hide()
+
 });
 
 $(function() {
@@ -22,17 +27,19 @@ $(function() {
           // Reload the page to get the updated list
           location.reload();
         }
-      );
+      );  
+
+
     });
 
 
-$(".create-form").on("#submitButton", function(event) {
+$("#submitButton").click(function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
-
+console.log("working")
     var newBurger = {
       name: $("#bn").val().trim(),
-      devoured: $("[name=devoured]:").val().trim(),
+      devoured: $("devoured").val()
     };
     $("#eat").append(newBurger)
 
@@ -47,5 +54,15 @@ $(".create-form").on("#submitButton", function(event) {
         location.reload();
       }
     );
+          // Send the GET request.
+          $.get("/", function(burgers){
+            alert("burgers " + burgers);
+          }).then(
+            function() {
+              console.log("get");
+              // Reload the page to get the updated list
+              location.reload();
+            }
+          );
   });
 });
